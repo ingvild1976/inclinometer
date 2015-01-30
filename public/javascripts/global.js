@@ -28,7 +28,7 @@ function populateTable(){
             tableContent += '<tr>';
 			tableContent += '<td>' + this._id + '</td>';
             //tableContent += '<td><input onblur="myFunction2(' + '\'' + this._id + '\'' + ')" type="text"' + this.Comment + '</input></td>';
-			tableContent += '<td><input id="text' + i + '" onblur="updateComment(' + '\'' + this._id + '\'' + ', ' + '\'' + i + '\'' + ')" type="text"' + this.Comment + '</input></td>';
+			tableContent += '<td><input id="text' + i + '" onblur="updateComment(' + '\'' + this._id + '\'' + ', ' + '\'' + i + '\'' + ')" type="text" value="' + this.Comment + '">' + this.Comment + '</input></td>';
             tableContent += '<td>' + this.TimeStamp + '</td>';
 			tableContent += '<td>' + this.ObservationType + '</td>';
 			tableContent += '<td>' + this.AccX + '</td>';
