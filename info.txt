@@ -1,0 +1,29 @@
+Nodejs - express - jade
+	Tutorial: http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/
+
+	Lastet ned nodejs fra http://nodejs.org/
+	Installert nodejs (elevated needed)
+	
+	Installere express:
+	cmd
+	npm config set proxy http://www-proxy.statoil.no
+	npm install -g express
+	
+	Mongodb
+	Evt installere mongodb
+	Starte database:
+	mongod.exe --dbpath C:\appl\repos\inclinometer\data from C:\Appl\mongodb\application\bin
+	
+	Kjøre test app:
+		cmd 
+		cd C:\appl\repos\inclinometer
+		npm install
+		npm start
+		
+	Fra chrome:
+			
+		
+	Rest test input:
+		https://git.statoil.no/ppar/rdi_inclinometer/wikis/home
+		uri: http://localhost:3000/observations/addobservation
+		
