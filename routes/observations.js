@@ -24,6 +24,40 @@ router.post('/addobservation', function(req, res) {
     });
 });
 
+/*
+ * POST to adduser.
+ */
+router.post('/updatecomment/:id', function(req, res) {
+    var db = req.db;
+	var observationIdToUpdate = req.params.id;
+	var newComment = req.body.comment;
+	console.log('update ' + observationIdToUpdate + ' with comment ' + newComment);
+	
+	//var obj = db.collection('observations').findById(observationIdToUpdate);
+	console.log('found');
+	
+	 db.collection('observations').findById(req.params.id, function(err, result){
+		//if (e) {
+		//	return next(err)
+		//};
+		result.comment=newComment;
+		
+		//todo: save it
+		
+		
+		//result.comment = newComment;		
+		res.send(
+            (err === null) ? { msg: '' } : { msg: err }
+        );
+  });
+	
+    //db.collection('observations').update(req.body, function(err, result){
+    //    res.send(
+     //       (err === null) ? { msg: '' } : { msg: err }
+    //    );
+    //});
+});
+
 
 /*
  * DELETE to deleteuser.
